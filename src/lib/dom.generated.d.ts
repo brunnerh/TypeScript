@@ -53,8 +53,8 @@ interface AnimationEventInit extends EventInit {
 }
 
 interface AnimationPlaybackEventInit extends EventInit {
-    currentTime?: CSSNumberish | null;
-    timelineTime?: CSSNumberish | null;
+    currentTime?: number | null;
+    timelineTime?: number | null;
 }
 
 interface AssignedNodesOptions {
@@ -226,12 +226,12 @@ interface CompositionEventInit extends UIEventInit {
 }
 
 interface ComputedEffectTiming extends EffectTiming {
-    activeDuration?: CSSNumberish;
+    activeDuration?: number;
     currentIteration?: number | null;
-    endTime?: CSSNumberish;
-    localTime?: CSSNumberish | null;
+    endTime?: number;
+    localTime?: number | null;
     progress?: number | null;
-    startTime?: CSSNumberish;
+    startTime?: number;
 }
 
 interface ComputedKeyframe {
@@ -425,7 +425,7 @@ interface EcdsaParams extends Algorithm {
 interface EffectTiming {
     delay?: number;
     direction?: PlaybackDirection;
-    duration?: number | CSSNumericValue | string;
+    duration?: number | string;
     easing?: string;
     endDelay?: number;
     fill?: FillMode;
@@ -2422,7 +2422,7 @@ interface AnimationEventMap {
 /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Animation) */
 interface Animation extends EventTarget {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Animation/currentTime) */
-    currentTime: CSSNumberish | null;
+    currentTime: number | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Animation/effect) */
     effect: AnimationEffect | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Animation/finished) */
@@ -2446,7 +2446,7 @@ interface Animation extends EventTarget {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Animation/replaceState) */
     readonly replaceState: AnimationReplaceState;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Animation/startTime) */
-    startTime: CSSNumberish | null;
+    startTime: number | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Animation/timeline) */
     timeline: AnimationTimeline | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Animation/cancel) */
@@ -2518,9 +2518,9 @@ interface AnimationFrameProvider {
 /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/AnimationPlaybackEvent) */
 interface AnimationPlaybackEvent extends Event {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/AnimationPlaybackEvent/currentTime) */
-    readonly currentTime: CSSNumberish | null;
+    readonly currentTime: number | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/AnimationPlaybackEvent/timelineTime) */
-    readonly timelineTime: CSSNumberish | null;
+    readonly timelineTime: number | null;
 }
 
 declare var AnimationPlaybackEvent: {
@@ -2531,7 +2531,7 @@ declare var AnimationPlaybackEvent: {
 /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/AnimationTimeline) */
 interface AnimationTimeline {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/AnimationTimeline/currentTime) */
-    readonly currentTime: CSSNumberish | null;
+    readonly currentTime: number | null;
 }
 
 declare var AnimationTimeline: {
